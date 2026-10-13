@@ -1,12 +1,12 @@
 def hitung_subtotal(harga, jumlah):
-    return harga + jumlah
+    return harga * jumlah
 
 
 def hitung_total(daftar_belanja):
     total = 0
 
     for item in daftar_belanja:
-        total = hitung_subtotal(
+        total += hitung_subtotal(
             item["harga"],
             item["jumlah"]
         )
@@ -15,7 +15,7 @@ def hitung_total(daftar_belanja):
 
 
 def hitung_kembalian(uang_bayar, total_belanja):
-    return abs(uang_bayar - total_belanja)
+    return uang_bayar - total_belanja
 
 
 def main():
